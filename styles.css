@@ -1,0 +1,53 @@
+body {
+  background-image: url('pics/bkg.png');
+}
+
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+	text-align: center;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 50%;
+}
+
+tr, td {
+	border: 2px solid black;
+	text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name{
+	font-size: 24px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: stretch;
+}
+
+.container > div {
+  margin: 5px;
+  text-align: center;
+  line-height: 75px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: rgba(255,255,255,0.6);
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+   
