@@ -1,20 +1,26 @@
+@font-face {
+  font-family: pixelated;
+  src: url(pixel-font7.regular.ttf);
+  text-size: 2em;
+}
+
 body {
   background-image: url('pics/bkg.png');
 }
 
-.rainbow_text_animated {
-    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
-    -webkit-background-clip: text;
+tr, td {
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 5px;
 	text-align: center;
-    background-clip: text;
-    color: transparent;
-    animation: rainbow_animation 6s ease-in-out infinite;
-    background-size: 400% 50%;
+	width: 200px;
 }
 
-tr, td {
-	border: 2px solid black;
-	text-align: center;
+table{
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 2em;
+	font-family: pixelated;
 }
 
 .center {
@@ -23,31 +29,135 @@ tr, td {
   margin-right: auto;
 }
 
-.name{
-	font-size: 24px;
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: stretch;
+  width: 100%;
 }
 
 .container > div {
   margin: 5px;
   text-align: center;
   line-height: 75px;
-  border: 3px solid black;
+  /*border: 3px solid black;
   border-radius: 5px;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.6);*/
 }
 
-@keyframes rainbow_animation {
-    0%,100% {
-        background-position: 0 0;
-    }
+.img{
+	border: 3px solid black;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.6);
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
 
-    50% {
-        background-position: 100% 0;
-   
+.petName{
+	font-family: pixelated;
+	font-size: 2em;
+	width: 100%;
+	margin: 8px;
+	padding: 0px 16px 0px 16px;
+	background-color: rgba(255,255,255,0.7);
+	border: 2px solid black;
+	border-radius: 5px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.link{
+	background-color: white;
+	cursor: pointer;
+}
+
+.link:hover{
+	background-color: #ddd;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: white;
+  font-family: pixelated;
+  font-size: 1em;
+  width: inherit;
+  border: none;
+  cursor: default;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: inherit;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: inherit;
+  font-size: 0.5em;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: right;
+  display: block;
+}
+
+.dropdown-content a:nth-of-type(5) {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 0px 16px;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  border-bottom: 2px solid black;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #ddd;}
