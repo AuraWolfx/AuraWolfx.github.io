@@ -6,34 +6,91 @@
 		<script src="scripts.js"></script>
 	</head>
 	<body>
-		<a href="index.html"><img src="pics/logo.gif" class="center" style="cursor: pointer;"></img></a>
+		<img src="pics/logo.gif" class="center" id="home" style="cursor: pointer;"></img>
 		<br/>
-		<table>
+		<table class="menu_parent">
 			<th>
-				<td class="dropdown">
-					<button class="dropbtn">Crew</button>
-					<div class="dropdown-content">
-						<p>Dogs</p>
-						<a href="puredogs.html">Purebred</a>
-						<a href="breddogs.html">Bred</a>
-						<a href="hexdogs.html">Hexed</a>
-						<p>Cats</p>
-						<a href="purecats.html">Purebred</a>
-						<a href="bredcats.html">Bred</a>
-						<a href="hexcats.html">Hexed</a>
-						<a href="otherpets.html">Other</a>
+				<td class="dropdown menu">
+					<button class="dropbtn" id="crew_btn">Crew</button>
+					<div class="dropdown-content" id="crew">
+						<p><i>Dogs</i></p>
+						<a href="#" id="pd" class="light_border">Purebred</a>
+						<a href="#" id="bd" class="light_border">Bred</a>
+						<a href="#" id="hd" class="light_border">Hexed</a>
+						<p><i>Cats</i></p>
+						<a href="#" id="pc" class="light_border">Purebred</a>
+						<a href="#" id="bc" class="light_border">Bred</a>
+						<a href="#" id="hc" class="light_border">Hexed</a>
+						<a href="#" id="oth" class="light_border">Other</a>
 					</div>
 				</td>
-				<td class="dropdown">
-					  <button class="dropbtn">Adoptions</button>
-						  <div class="dropdown-content">
-							<a href="#">Singles</a>
-							<a href="#">Litters</a>
+				<td class="dropdown menu">
+					  <button class="dropbtn" id="adopt_btn">Adoptions</button>
+						  <div class="dropdown-content" id="adoptions">
+							<a href="#" id="singles" class="light_border">Singles</a>
+							<a href="#" id="litters" class="light_border">Litters</a>
 					  </div>
 				</td>
-				<td class="link"><a href="about.html">About</a></td>
+				<td class="link menu" id="about"><div>About</div></td>
 			</th>
 		</table>
-		<br/>
+		<h1 class="page_title">Home</h1>
+		<!--
+		<div id="pet_list" class="container" style="display:none">
+			<div class="container" id="pure_dog_list" style="flex-basis: 59%; display:none;"></div>
+			<div class="container" id="bred_dog_list" style="flex-basis: 59%; display:none;"></div>
+			<div class="container" id="hex_dog_list" style="flex-basis: 59%; display:none;"></div>
+			<div class="container" id="pure_cat_list" style="flex-basis: 59%; display:none;"></div>
+			<div class="container" id="bred_cat_list" style="flex-basis: 59%; display:none;"></div>
+			<div class="container" id="hex_cat_list" style="flex-basis: 59%; display:none;"></div>
+			<div class="container" id="other_list" style="flex-basis: 59%; display:none;"></div>
+			<div class="container" id="pet_info" style="flex-basis: 39%;">
+				<p id="petName" class="petName"></p>
+				<img class="img" id="expanded" src=""></img>
+			</div>
+		</div>
+		-->
+		<table id="pet_list" style="width: 95%; display:none;">
+			<tr>
+				<td rowspan="2" style="width:57%;" valign="top">
+					<div class="container" id="pure_dog_list" style="display:none;"></div>
+					<div class="container" id="bred_dog_list" style="display:none;"></div>
+					<div class="container" id="hex_dog_list" style="display:none;"></div>
+					<div class="container" id="pure_cat_list" style="display:none;"></div>
+					<div class="container" id="bred_cat_list" style="display:none;"></div>
+					<div class="container" id="hex_cat_list" style="display:none;"></div>
+					<div class="container" id="other_list" style="display:none;"></div>
+				</td>
+				<td colspan="2" style="width:43%;">
+					<table id="pet_info" style="width: 100%; height: 100%;">
+						<tr>
+							<td colspan="2" align="center" style="height: 2.5em;">
+								<p id="petName" class="petName"></p>
+							</td>
+						<tr>
+						<tr>
+							<td class="info" valign="top">
+								<p>info</p>
+							</td>
+							<td style="width: 380px;" valign="top">
+								<img class="big_img" id="expanded" src=""></img>
+							</td>
+						<tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<!--
+		<table class="table">
+			<tr>
+				<td rowspan="2" class="td" style="width:60%;">pet list</td>
+				<td colspan="2" class="td" style="width:40%;">pet name</td>
+			</tr>
+			<tr>
+				<td class="td" >pet info</td>
+				<td class="td" >pet picture</td>
+			</tr>
+		</table>
+		-->
 	</body>
 </html>
