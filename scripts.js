@@ -14,221 +14,274 @@ let hcLookup = [90,91,92,93];
 let other = ['Salmia','Patrol'];
 let oLookup = [94,95];
 let petDivs = ['#pure_dog_list','#bred_dog_list','#hex_dog_list','#pure_cat_list','#bred_cat_list','#hex_cat_list','#other_list'];
-let titles = ['Purebred Dogs','Bred Dogs','Hexed Dogs','Purebred Cats','Bred Cats','Hexed Cats','Other Pets', 'Single Adoptions', 'Litter Adoptions', 'About', 'Home'];
+let titles = ['Purebred Dogs','Bred Dogs','Hexed Dogs','Purebred Cats','Bred Cats','Hexed Cats','Other Pets', 'Single Adoptions', 'Litter Adoptions', 'About', 'Contact', 'Home'];
 var stickers = './pics/stickers/';
 var bigstickers = './pics/stickers/big/';
 var heads = './pics/heads/';
 var bigheads = './pics/heads/big/';
+let crewOpen = false;
+let adoptOpen = false;
 const pets = {
 	"dogs":{
 		"purebred":{
 			"Alastar":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Arroz":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Baby":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Brandy":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Caine":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Cici":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Daisy":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Fame":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Feliz":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"French Fry":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Lights":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Wren":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			}
 		},
 		"bred":{
 			"Aster":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Bubonic":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Celine":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Coolaid":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Duffie":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Dutch":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Eddie":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Eightball":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Florence":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Glancy":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Hotpie":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Ixika":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Leche":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Marmalade":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Niles":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Piper":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Portia":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Primrose":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"River":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Setter":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Spice":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Ty":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Vivian":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Whiskey":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Zapato":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			}
 		},
 		"hex":{
 			"Blitzen":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Blueberry":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Custard":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Georgia":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Ginkgo":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Goji":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Gumball":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Harbor":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"July":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Kyle":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Meteor":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Opal":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Petal":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Ross":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			}
 		}
 	},
@@ -236,186 +289,230 @@ const pets = {
 		"purebred":{
 			"Apricot":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Dinosaur":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Mioka":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Pepper":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Ragu":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			}
 		},
 		"bred":{
 			"Aralu":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Beat":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Bills":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Bonnie Blue":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Bristol":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Buttermilk":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Cake":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Carlisle":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Cigar":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Corteo":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Creamsicle":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Dandy":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Dark":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Dip'n'dots":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Frito":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Furby":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Guster":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Hayley":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Holland":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Honeycomb":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Melba":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Negg":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Oreo":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Perry":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Popsicle":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Razz":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Reindeer":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Reual":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Romaine":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Scurvy":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Seagull":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Slater":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Sushi":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Tocca":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			}
 		},
 		"hex":{
 			"Cirrus":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Moonlight":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Parks":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			},
 			"Toxic":{
 				"breed":"",
-				"sex":""
+				"sex":"",
+				"origin":""
 			}
 		}
 	},
 	"other":{
 		"Salmia":{
 				"breed":"Pig",
-				"sex":""
+				"sex":"",
+				"origin":""
 		},
 		"Patrol":{
 				"breed":"Cow",
@@ -436,6 +533,7 @@ $(document).ready(function(){
 								.append($('<img>')
 									.attr('src', heads+pureDogs[i]+'.png')
 									.addClass('img')
+									.addClass('unselectable')
 									.attr('onerror', 'this.onerror=null; this.src=\'pics/missing.png\''))
 		);
 	}
@@ -505,13 +603,64 @@ $(document).ready(function(){
 									.attr('onerror', 'this.onerror=null; this.src=\'pics/missing.png\''))
 		);
 	}
+	
+	//Close dropdowns
+	$(document).mouseup(function(e) {
+		if (!$("#crew").is(e.target) && $("#crew").has(e.target).length === 0){$('#crew').css('display', 'none');}
+		if (!$("#adopt_btn").is(e.target) && $("#adopt_btn").has(e.target).length === 0){$('#adoptions').css('display', 'none');}
+	});
+	$('#crew_btn').hover(function(){
+		$('#crew').css('display', 'block');
+		$('#adoptions').css('display', 'none');
+	});
+	$('#crew').hover(function(){},function(){$('#crew').css('display', 'none');});
+	$('#adoptions').hover(function(){},function(){$('#adoptions').css('display', 'none');});
+	$('#adopt_btn').hover(function(){
+		$('#adoptions').css('display', 'block');
+		$('#crew').css('display', 'none');
+	});
+	$('#pd').click(function(){showCrew(0);});
+	$('#bd').click(function(){showCrew(1);});
+	$('#hd').click(function(){showCrew(2);});
+	$('#pc').click(function(){showCrew(3);});
+	$('#bc').click(function(){showCrew(4);});
+	$('#hc').click(function(){showCrew(5);});
+	$('#oth').click(function(){showCrew(6);});
+	$('#singles').click(function(){hideCrew(7)});
+	$('#litters').click(function(){hideCrew(8)});
+	$('#about').click(function(){hideCrew(9)});
+	$('#contact').click(function(){hideCrew(10)});
+	$('#home').click(function(){hideCrew(11)});
+
+	function showCrew(id){
+		$('#crew').css('display', 'none');
+		$('#pet_list').css('display', '');
+		//$('#pet_info').hide();
+		$("#petName").text('Select a pet!');
+		$('#expanded').hide();
+		$('.page_title').text(titles[id]);
+		for(i of petDivs)
+			if(i==petDivs[id]){
+				//console.log(i);
+				$(i).css('display', '');
+			}else{
+				$(i).css('display', 'none');
+			}
+	}
+	function hideCrew(id){
+		$('#pet_list').css('display', 'none');
+		$('.page_title').text(titles[id]);
+	}
+
 	$(".pet").click(function(){
 		$('#pet_info').show();
 		showImage($(this).attr('id'));
 	});
+
 	function showImage(id){
 		var thisPet = petz[id];
 		var filename = bigstickers+thisPet+'.png';
+		$('#expanded').show();
 		$("#expanded").attr('src', filename).attr('onerror', 'this.onerror=null; this.src=\'pics/missing_big.png\'');
 		$("#petName").text(thisPet);
 		setPetInfo(thisPet);
@@ -544,48 +693,52 @@ $(document).ready(function(){
 		}
 		$('#info').text("Breed: "+thisPet.breed);
 	}
-	//Close dropdowns
-	$(document).mouseup(function(e) {
-		if (!$("#crew").is(e.target) && $("#crew").has(e.target).length === 0){$('#crew').css('display', 'none');}
-		if (!$("#adopt_btn").is(e.target) && $("#adopt_btn").has(e.target).length === 0){$('#adoptions').css('display', 'none');}
-	});
-	$('#crew_btn').hover(function(){
-		$('#crew').css('display', 'block');
-		$('#adoptions').css('display', 'none');
-	});
-	$('#crew').hover(function(){},function(){$('#crew').css('display', 'none');});
-	$('#adoptions').hover(function(){},function(){$('#adoptions').css('display', 'none');});
-	$('#adopt_btn').hover(function(){
-		$('#adoptions').css('display', 'block');
-		$('#crew').css('display', 'none');
-	});
-	$('#pd').click(function(){showCrew(0);});
-	$('#bd').click(function(){showCrew(1);});
-	$('#hd').click(function(){showCrew(2);});
-	$('#pc').click(function(){showCrew(3);});
-	$('#bc').click(function(){showCrew(4);});
-	$('#hc').click(function(){showCrew(5);});
-	$('#oth').click(function(){showCrew(6);});
-	$('#singles').click(function(){hideCrew(7)});
-	$('#litters').click(function(){hideCrew(8)});
-	$('#about').click(function(){hideCrew(9)});
-	$('#home').click(function(){hideCrew(10)});
-	function showCrew(id){
-		$('#crew').css('display', 'none');
-		$('#pet_list').css('display', '');
-		$('#pet_info').hide();
-		//$('#expanded').attr('src', '');
-		$('.page_title').text(titles[id]);
-		for(i of petDivs)
-			if(i==petDivs[id]){
-				//console.log(i);
-				$(i).css('display', '');
-			}else{
-				$(i).css('display', 'none');
-			}
-	}
-	function hideCrew(id){
-		$('#pet_list').css('display', 'none');
-		$('.page_title').text(titles[id]);
-	}
+
+	
 });
+function openNav() {
+	document.getElementById("mySidenav").style.width = "250px";
+	document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("main").style.marginLeft= "0";
+	crewOpen = false;
+	adoptOpen = false;
+	closeCrew();
+	closeAdopt();
+}
+
+function openCrew(){
+	crewOpen=!crewOpen;
+	if(crewOpen){
+		document.getElementById("crewOpts").style.height = "310px";
+		document.getElementById("crewOpts").style.padding = "10px 0";
+		document.getElementById("crewLbl").innerHTML = "Crew&#9662;";
+	}else{
+		closeCrew();
+	}
+}
+
+function closeCrew(){
+	document.getElementById("crewOpts").style.height = "0";
+	document.getElementById("crewOpts").style.padding = "0";
+	document.getElementById("crewNav").style.marginTop = "0";
+	document.getElementById("crewLbl").innerHTML = "Crew&#9656;";
+}
+
+function openAdopt(){
+	adoptOpen=!adoptOpen;
+	if(adoptOpen){
+		document.getElementById("adoptOpts").style.height = "80px";
+		document.getElementById("adoptLbl").innerHTML = "Adoptions&#9662;";
+	}else{
+		closeAdopt();
+	}
+}
+
+function closeAdopt(){
+	document.getElementById("adoptOpts").style.height = "0";
+	document.getElementById("adoptLbl").innerHTML = "Adoptions&#9656;";
+}

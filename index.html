@@ -6,64 +6,66 @@
 		<script src="scripts.js"></script>
 	</head>
 	<body>
-		<img src="pics/logo.gif" class="center" id="home" style="cursor: pointer;"></img>
-		<br/>
-		<table class="menu_parent">
-			<th>
-				<td class="dropdown menu">
-					<button class="dropbtn" id="crew_btn">Crew</button>
-					<div class="dropdown-content" id="crew">
-						<p><i>Dogs</i></p>
-						<a href="#" id="pd" class="light_border">Purebred</a>
-						<a href="#" id="bd" class="light_border">Bred</a>
-						<a href="#" id="hd" class="light_border">Hexed</a>
-						<p><i>Cats</i></p>
-						<a href="#" id="pc" class="light_border">Purebred</a>
-						<a href="#" id="bc" class="light_border">Bred</a>
-						<a href="#" id="hc" class="light_border">Hexed</a>
-						<a href="#" id="oth" class="light_border">Other</a>
+		<!--<img src="pics/logo.gif" class="center" id="home" style="cursor: pointer;"></img>-->
+		<h1 class="logo unselectable" id="home">Aura</h1>
+		<h2 class="page_title unselectable">Home</h2>
+		<div id="sidenav" class="sidenav unselectable">
+			<a href="#" id="crewLbl" onclick="openCrew()">Crew&#9656;</a>
+			<div id="crewNav">
+				<div id="crewOpts" class="subNav">
+					<p style="margin: 0em 2em; color: var(--c2); font-size: 1.5em;">Dogs</p>
+					<a href="#" id="pd" style="text-align: right; font-size: 1.5em; margin-right:1em;">Purebred</a>
+					<a href="#" id="bd" style="text-align: right; font-size: 1.5em; margin-right:1em;">Bred</a>
+					<a href="#" id="hd" style="text-align: right; font-size: 1.5em; margin-right:1em;">Hex</a>
+					<p style="margin: 0em 2em; color: var(--c2); font-size: 1.5em;">Cats</p>
+					<a href="#" id="pc" style="text-align: right; font-size: 1.5em; margin-right:1em;">Purebred</a>
+					<a href="#" id="bc" style="text-align: right; font-size: 1.5em; margin-right:1em;">Bred</a>
+					<a href="#" id="hc" style="text-align: right; font-size: 1.5em; margin-right:1em;">Hex</a>
+					<a href="#" id="oth" style="margin: 0em 2em; font-size: 1.5em; padding: 0;">Other</a>
+				</div>
+				<a href="#" id="adoptLbl" onclick="openAdopt()">Adoptions&#9656;</a>
+				<div id="adoptNav">
+					<div id="adoptOpts" class="subNav">
+						<a href="#" style="text-align: right; font-size: 1.5em; margin-right:1em;">Singles</a>
+						<a href="#" style="text-align: right; font-size: 1.5em; margin-right:1em;">Litters</a>
 					</div>
-				</td>
-				<td class="dropdown menu">
-					  <button class="dropbtn" id="adopt_btn">Adoptions</button>
-						  <div class="dropdown-content" id="adoptions">
-							<a href="#" id="singles" class="light_border">Singles</a>
-							<a href="#" id="litters" class="light_border">Litters</a>
-					  </div>
-				</td>
-				<td class="link menu" id="about"><div>About</div></td>
-			</th>
-		</table>
-		<h1 class="page_title">Home</h1>
-		<table id="pet_list" style="width: 95%; display:none;">
-			<tr>
-				<td rowspan="2" style="width:57%;" valign="top">
-					<div class="container" id="pure_dog_list" style="display:none;"></div>
-					<div class="container" id="bred_dog_list" style="display:none;"></div>
-					<div class="container" id="hex_dog_list" style="display:none;"></div>
-					<div class="container" id="pure_cat_list" style="display:none;"></div>
-					<div class="container" id="bred_cat_list" style="display:none;"></div>
-					<div class="container" id="hex_cat_list" style="display:none;"></div>
-					<div class="container" id="other_list" style="display:none;"></div>
-				</td>
-				<td colspan="2" style="width:43%;">
-					<table id="pet_info" style="width: 100%; height: 100%;">
-						<tr>
-							<td colspan="2" align="center" style="height: 2.5em;">
-								<p id="petName" class="petName"></p>
-							</td>
-						<tr>
-						<tr>
-							<td id="info" class="info" valign="top">
-								<p>info</p>
-							</td>
-							<td class="info" style="width: 420px; height: 420px;">
-								<img id="expanded" style="display: block; margin-left: auto; margin-right: auto;" src=""></img>
-							</td>
-						<tr>
-					</table>
-				</td>
-			</tr>
-		</table>
+					<a href="#" id="about">About</a>
+					<a href="#" id="contact">Contact</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="main" style="margin-left: 250px; margin-top: 100px;">
+			<table id="pet_list" style="width: 100%; display:none;">
+				<tr>
+					<td rowspan="2" style="width:57%;" valign="top">
+						<div class="container" id="pure_dog_list" style="display:none;"></div>
+						<div class="container" id="bred_dog_list" style="display:none;"></div>
+						<div class="container" id="hex_dog_list" style="display:none;"></div>
+						<div class="container" id="pure_cat_list" style="display:none;"></div>
+						<div class="container" id="bred_cat_list" style="display:none;"></div>
+						<div class="container" id="hex_cat_list" style="display:none;"></div>
+						<div class="container" id="other_list" style="display:none;"></div>
+					</td>
+					<td colspan="2" style="width:43%;">
+						<table id="pet_info" style="width: 100%; height: 100%;">
+							<tr>
+								<td colspan="2" align="center" style="height: 2.5em;">
+									<p id="petName" class="petName"></p>
+								</td>
+							<tr>
+							<tr>
+								<td id="info" class="info" valign="top">
+									<p>info</p>
+								</td>
+								<td class="info" style="width: 450px; height: 500px;">
+									<img id="expanded" style="display: block; margin-left: auto; margin-right: auto;" src=""></img>
+								</td>
+							<tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</body>
 </html>
