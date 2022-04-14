@@ -23,311 +23,410 @@ const pets = {
 	"dogs":{
 		"purebred":{
 			"Alastar":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Arroz":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Baby":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Brandy":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Caine":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Cici":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Daisy":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Fame":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Feliz":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"French Fry":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Lights":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Wren":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			}
 		},
 		"bred":{
 			"Aster":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Bubonic":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Celine":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Coolaid":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Duffie":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Dutch":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Eddie":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Eightball":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Florence":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Glancy":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Hotpie":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Ixika":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Leche":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Marmalade":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Niles":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Piper":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Portia":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Primrose":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"River":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Setter":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Spice":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Ty":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Vivian":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Whiskey":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Zapato":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			}
 		},
 		"hex":{
 			"Blitzen":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Blueberry":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Custard":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Georgia":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Ginkgo":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Goji":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Gumball":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Harbor":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"July":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Kyle":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Meteor":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Opal":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Petal":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Ross":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			}
 		}
 	},
 	"cats":{
 		"purebred":{
 			"Apricot":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Dinosaur":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Mioka":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Pepper":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Ragu":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			}
 		},
 		"bred":{
 			"Aralu":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Beat":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Bills":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Bonnie Blue":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Bristol":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Buttermilk":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Cake":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Carlisle":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Cigar":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Corteo":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Creamsicle":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Dandy":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Dark":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Dip'n'dots":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Frito":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Furby":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Guster":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Hayley":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Holland":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Honeycomb":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Melba":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Negg":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Oreo":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Perry":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Popsicle":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Razz":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Reindeer":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Reual":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Romaine":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Scurvy":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Seagull":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Slater":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Sushi":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Tocca":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			}
 		},
 		"hex":{
 			"Cirrus":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Moonlight":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Parks":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			},
 			"Toxic":{
-				"breed":""
+				"breed":"",
+				"sex":""
 			}
 		}
 	},
 	"other":{
 		"Salmia":{
-				"breed":""
+				"breed":"Pig",
+				"sex":""
 		},
 		"Patrol":{
-				"breed":""
+				"breed":"Cow",
+				"sex":"",
+				"origin":""
 		}
 	}
 }
+
 $(document).ready(function(){
+	//console.log(pets["dogs"].purebred["Arroz"]);
 	$('#pet_info').hide();
 	//pure dogs
 	for (let i = 0; i < pureDogs.length; i++) {
@@ -336,7 +435,7 @@ $(document).ready(function(){
 							.attr('id', pdLookup[i].toString())
 								.append($('<img>')
 									.attr('src', heads+pureDogs[i]+'.png')
-									.attr('class', 'img')
+									.addClass('img')
 									.attr('onerror', 'this.onerror=null; this.src=\'pics/missing.png\''))
 		);
 	}
@@ -415,6 +514,35 @@ $(document).ready(function(){
 		var filename = bigstickers+thisPet+'.png';
 		$("#expanded").attr('src', filename).attr('onerror', 'this.onerror=null; this.src=\'pics/missing_big.png\'');
 		$("#petName").text(thisPet);
+		setPetInfo(thisPet);
+	}
+
+	function setPetInfo(name){
+		var thisPet;
+		switch(parseInt(titles.indexOf($('.page_title').text()))){
+			case 0:
+				thisPet = pets["dogs"].purebred[name];
+				break;
+			case 1:
+				thisPet = pets["dogs"].bred[name];
+				break;
+			case 2:
+				thisPet = pets["dogs"].hex[name];
+				break;
+			case 3:
+				thisPet = pets["cats"].purebred[name];
+				break;
+			case 4:
+				thisPet = pets["cats"].bred[name];
+				break;
+			case 5:
+				thisPet = pets["cats"].hex[name];
+				break;
+			case 6:
+				thisPet = pets["other"][name];
+				break;
+		}
+		$('#info').text("Breed: "+thisPet.breed);
 	}
 	//Close dropdowns
 	$(document).mouseup(function(e) {
