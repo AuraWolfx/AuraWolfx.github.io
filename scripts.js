@@ -16,7 +16,6 @@ let oLookup = [94,95];
 let petDivs = ['#pure_dog_list','#bred_dog_list','#hex_dog_list','#pure_cat_list','#bred_cat_list','#hex_cat_list','#other_list'];
 let titles = ['Purebred Dogs','Bred Dogs','Hexed Dogs','Purebred Cats','Bred Cats','Hexed Cats','Other Pets', 'Single Adoptions', 'Litter Adoptions', 'About', 'Contact', 'Home'];
 var stickers = './pics/stickers/';
-var bigstickers = './pics/stickers/big/';
 var heads = './pics/heads/';
 var bigheads = './pics/heads/big/';
 let crewOpen = false;
@@ -523,8 +522,6 @@ const pets = {
 }
 
 $(document).ready(function(){
-	//console.log(pets["dogs"].purebred["Arroz"]);
-	$('#pet_info').hide();
 	//pure dogs
 	for (let i = 0; i < pureDogs.length; i++) {
 		$("#pure_dog_list").append($('<div>')
@@ -545,6 +542,7 @@ $(document).ready(function(){
 								.append($('<img>')
 									.attr('src', heads+bredDogs[i]+'.png')
 									.attr('class', 'img')
+									.addClass('unselectable')
 									.attr('onerror', 'this.onerror=null; this.src=\'pics/missing.png\''))
 		);
 	}
@@ -556,6 +554,7 @@ $(document).ready(function(){
 								.append($('<img>')
 									.attr('src', heads+hexDogs[i]+'.png')
 									.attr('class', 'img')
+									.addClass('unselectable')
 									.attr('onerror', 'this.onerror=null; this.src=\'pics/missing.png\''))
 		);
 	}
@@ -567,6 +566,7 @@ $(document).ready(function(){
 								.append($('<img>')
 									.attr('src', heads+pureCats[i]+'.png')
 									.attr('class', 'img')
+									.addClass('unselectable')
 									.attr('onerror', 'this.onerror=null; this.src=\'pics/missing.png\''))
 		);
 	}
@@ -578,6 +578,7 @@ $(document).ready(function(){
 								.append($('<img>')
 									.attr('src', heads+bredCats[i]+'.png')
 									.attr('class', 'img')
+									.addClass('unselectable')
 									.attr('onerror', 'this.onerror=null; this.src=\'pics/missing.png\''))
 		);
 	}
@@ -589,6 +590,7 @@ $(document).ready(function(){
 								.append($('<img>')
 									.attr('src', heads+hexCats[i]+'.png')
 									.attr('class', 'img')
+									.addClass('unselectable')
 									.attr('onerror', 'this.onerror=null; this.src=\'pics/missing.png\''))
 		);
 	}
@@ -600,6 +602,7 @@ $(document).ready(function(){
 								.append($('<img>')
 									.attr('src', heads+other[i]+'.png')
 									.attr('class', 'img')
+									.addClass('unselectable')
 									.attr('onerror', 'this.onerror=null; this.src=\'pics/missing.png\''))
 		);
 	}
@@ -659,7 +662,7 @@ $(document).ready(function(){
 
 	function showImage(id){
 		var thisPet = petz[id];
-		var filename = bigstickers+thisPet+'.png';
+		var filename = stickers+thisPet+'.png';
 		$('#expanded').show();
 		$("#expanded").attr('src', filename).attr('onerror', 'this.onerror=null; this.src=\'pics/missing_big.png\'');
 		$("#petName").text(thisPet);
