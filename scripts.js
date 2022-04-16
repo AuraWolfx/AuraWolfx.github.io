@@ -316,33 +316,33 @@ let dogs = {
 };
 let cats = {
 	"Apricot":{
-		"breed":"",
-		"sex":"",
+		"breed":"B+W Shorthair",
+		"sex":"F",
 		"type":"purebred",
-		"origin":""
+		"origin":"Bred by me"
 	},
 	"Dinosaur":{
-		"breed":"",
-		"sex":"",
+		"breed":"Persian",
+		"sex":"M",
 		"type":"purebred",
-		"origin":""
+		"origin":"Bred by me"
 	},
 	"Mioka":{
-		"breed":"",
-		"sex":"",
+		"breed":"Persian",
+		"sex":"F",
 		"type":"purebred",
-		"origin":""
+		"origin":"Bred by me"
 	},
 	"Pepper":{
-		"breed":"",
-		"sex":"",
+		"breed":"B+W Shorthair",
+		"sex":"M",
 		"type":"purebred",
-		"origin":""
+		"origin":"1st gen - adoption center"
 	},
 	"Ragu":{
 		"breed":"",
 		"sex":"",
-		"type":"purebred",
+		"type":"bred",
 		"origin":""
 	},
 	"Aralu":{
@@ -575,14 +575,14 @@ let cats = {
 	}
 };
 let other = {
-	"Salmia":{
-		"breed":"Pig",
+	"Patrol":{
+		"breed":"Cow",
 		"sex":"",
 		"type":"",
 		"origin":""
 	},
-	"Patrol":{
-		"breed":"Cow",
+	"Salmia":{
+		"breed":"Pig",
 		"sex":"",
 		"type":"",
 		"origin":""
@@ -590,7 +590,8 @@ let other = {
 };
 
 $(document).ready(function(){
-	for(let d in dogs){
+	for(let d in Object.keys(dogs).sort().reduce(function (obj, key){obj[key] = dogs[key];return obj;}, {})){
+		console.log(d);
 		$("#dog_list").append($('<div>')
 							.attr('class', 'pet')
 							.attr('id', d)
@@ -601,7 +602,7 @@ $(document).ready(function(){
 									.attr('onerror', 'this.onerror=null; this.src=\'pics/missing.png\''))
 		);
 	}
-	for(let c in cats){
+	for(let c in Object.keys(cats).sort().reduce(function (obj, key){obj[key] = cats[key];return obj;}, {})){
 		$("#cat_list").append($('<div>')
 							.attr('class', 'pet')
 							.attr('id', c)
@@ -690,7 +691,9 @@ $(document).ready(function(){
 				thisPet = other[name];
 				break;
 		}
-		$('#info').text("Breed: "+thisPet.breed);
+		$('#breed').text((thisPet.breed==""?"N/A":thisPet.breed));
+		$('#sex').text((thisPet.sex==""?"N/A":(thisPet.sex=="M"?"Male":"Female")));
+		$('#origin').text((thisPet.origin==""?"N/A":thisPet.origin));
 	}
 
 	
@@ -726,20 +729,20 @@ function resetFilter(){
 function setFilter(arr, selected){
 	for(let a in arr){
 		if(selected=="all"){
-			$('#'+a).fadeIn(500, 'linear');
+			$('#'+a).fadeIn(250, 'linear');
 			$('#'+a).css('width', '96px');
 			$('#'+a).css('margin-left', '5px');
 			$('#'+a).css('margin-right', '5px');
 			$('#'+a).css('border', '3px solid var(--c1)');
 		}else{
 			if(arr[a].type!=selected){
-				$('#'+a).fadeOut(500, 'linear');
+				$('#'+a).fadeOut(250, 'linear');
 				$('#'+a).css('width', '0');
 				$('#'+a).css('margin-left', '0');
 				$('#'+a).css('margin-right', '0');
 				$('#'+a).css('border', '0');
 			}else{
-				$('#'+a).fadeIn(500, 'linear');
+				$('#'+a).fadeIn(250, 'linear');
 				$('#'+a).css('width', '96px');
 				$('#'+a).css('margin-left', '5px');
 				$('#'+a).css('margin-right', '5px');
