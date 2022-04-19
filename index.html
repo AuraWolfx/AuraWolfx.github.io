@@ -6,9 +6,14 @@
 		<script src="scripts.js"></script>
 	</head>
 	<body>
-		<h1 class="logo unselectable" id="home">Aura</h1>
+		<div class="header">
+			<a href="#" class="logo unselectable" id="home">Aura</a>
+		</div>
 		<h2 id="page_title" class="page_title unselectable">Home</h2>
+		<span style="font-size:30px;cursor:pointer; margin-left: 10px; margin-top:15px; position: fixed;" onclick="openNav()">&#9776;</span>
+		
 		<div id="sidenav" class="sidenav unselectable">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			<a href="#" id="crewLbl" onclick="openCrew()">Crew&#9656;</a>
 			<div id="crewNav">
 				<div id="crewOpts" class="subNav">
@@ -27,12 +32,11 @@
 				</div>
 			</div>
 		</div>
-
-		<div id="home_page" class="container">
-			<h1 style="margin-left: 1em;">Home Page</h1>
-		</div>
-		<div id="main" style="margin-left: 250px; margin-top: 100px;">
-			<select id="filter" onchange="filterPets()">
+		<div id="main" style="margin-left: 250px;">
+			<div id="home_page" class="container">
+				<h1 style="margin-left: 1em;">Home Page</h1>
+			</div>
+			<select id="filter" style="cursor: pointer;" onchange="filterPets()">
 				<option id="filter_all">All</option>
 				<option id="filter_pure">Purebred</option>
 				<option id="filter_bred">Bred</option>
@@ -46,7 +50,7 @@
 						<div class="container" id="other_list" style="display:none;"></div>
 					</td>
 					<td colspan="2" valign="top" style="width:50%;">
-						<table id="pet_info" valign="top" style="width: 800px; height: 600px; position: fixed;">
+						<table id="pet_info" valign="top">
 							<tr>
 								<td colspan="2" align="center" style="height: 3em;">
 									<p id="petName" class="petName"></p>
@@ -61,7 +65,7 @@
 									<h4 style="margin:0; text-decoration:underline; padding: 5px 5px 5px 5px;">Origin:</h4>
 									<p id="origin" style="margin:0 0 0 5px;">N/A</p>
 								</td>
-								<td class="info" style="width: 480px; height: 500px;">
+								<td class="big_img">
 									<img id="expanded" style="display: block; margin-left: auto; margin-right: auto;" src=""></img>
 								</td>
 							</tr>

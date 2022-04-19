@@ -1,4 +1,4 @@
-let petz = ['Alastar','Arroz','Baby','Brandy','Caine','Cici','Daisy','Fame','Feliz','French Fry','Lights','Wren','Aster','Bubonic','Celine','Coolaid','Duffie','Dutch','Eddie','Eightball','Florence','Glancy','Hotpie','Ixika','Leche','Marmalade','Niles','Piper','Portia','Primrose','River','Setter','Spice','Ty','Vivian','Whiskey','Zapato','Blitzen','Blueberry','Custard','Georgia','Ginkgo','Goji','Gumball','Harbor','July','Kyle','Meteor','Opal','Petal','Ross','Apricot','Dinosaur','Mioka','Pepper','Ragu','Aralu','Beat','Bills','Bonnie Blue','Bristol','Buttermilk','Cake','Carlisle','Cigar','Corteo','Creamsicle','Dandy','Dark','Dip\'n\'dots','Frito','Furby','Guster','Hayley','Holland','Honeycomb','Melba','Negg','Oreo','Perry','Popsicle','Razz','Reindeer','Reual','Romaine','Scurvy','Seagull','Slater','Sushi','Tocca','Cirrus','Moonlight','Parks','Toxic','Salmia','Patrol'];
+let petz = ['Alastar','Arroz','Baby','Brandy','Caine','Cici','Daisy','Fame','Feliz','French Fry','Lights','Wren','Aster','Bubonic','Celine','Coolaid','Duffie','Dutch','Eddie','Eightball','Florence','Glancy','Hotpie','Ixika','Leche','Marmalade','Niles','Piper','Portia','Primrose','River','Setter','Spice','Ty','Vivian','Whiskey','Zapato','Blitzen','Blueberry','Custard','Georgia','Ginkgo','Goji','Gumball','Harbor','July','Kyle','Meteor','Opal','Petal','Ross','Apricot','Dinosaur','Mioka','Pepper','Ragu','Aralu','Beat','Bills','Bonnie Blue','Bristol','Buttermilk','Cake','Carlisle','Cigar','Corteo','Creamsicle','Dandy','Dark','Frito','Furby','Guster','Hayley','Holland','Honeycomb','Melba','Negg','Oreo','Perry','Popsicle','Razz','Reindeer','Reual','Romaine','Scurvy','Seagull','Slater','Sushi','Tocca','Cirrus','Moonlight','Parks','Toxic','Salmia','Patrol'];
 let petDivs = ['#dog_list', '#cat_list', '#other_list'];
 let titles = ['Dogs', 'Cats','Other Pets', 'Single Adoptions', 'Litter Adoptions', 'About', 'Contact', 'Home'];
 var stickers = './pics/stickers/';
@@ -423,12 +423,6 @@ let cats = {
 		"type":"bred",
 		"origin":""
 	},
-	"Dip-n-dots":{
-		"breed":"",
-		"sex":"",
-		"type":"bred",
-		"origin":""
-	},
 	"Frito":{
 		"breed":"",
 		"sex":"",
@@ -589,7 +583,19 @@ let other = {
 	}
 };
 
+//
+//	JQuery
+//
+
 $(document).ready(function(){
+	if(window.innerWidth<1440){
+		document.getElementById("sidenav").style.transition = "0s";
+		document.getElementById("main").style.transition = "0s";
+		document.getElementById("filter").style.transition = "0s";
+		closeNav();
+	}else{
+		openNav();
+	}
 	for(let d in Object.keys(dogs).sort().reduce(function (obj, key){obj[key] = dogs[key];return obj;}, {})){
 		console.log(d);
 		$("#dog_list").append($('<div>')
@@ -696,8 +702,19 @@ $(document).ready(function(){
 		$('#origin').text((thisPet.origin==""?"N/A":thisPet.origin));
 	}
 
+	window.onresize = function(event) {
+		if(window.innerWidth<1440){
+			closeNav();
+		}else{
+			openNav();
+		}
+	};
 	
 });
+
+//
+//	Not JQuery
+//
 
 function filterPets(){
 	var selected = document.getElementById("filter").value.toLowerCase();
@@ -753,13 +770,18 @@ function setFilter(arr, selected){
 }
 
 function openNav() {
-	document.getElementById("mySidenav").style.width = "250px";
+	document.getElementById("sidenav").style.transition = "0.5s";
+	document.getElementById("main").style.transition = "0.5s";
+	document.getElementById("filter").style.transition = "0.5s";
+	document.getElementById("sidenav").style.width = "250px";
 	document.getElementById("main").style.marginLeft = "250px";
+	document.getElementById("filter").style.marginLeft = "5px";
 }
 
 function closeNav() {
-	document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("sidenav").style.width = "0";
 	document.getElementById("main").style.marginLeft= "0";
+	document.getElementById("filter").style.marginLeft = "50px";
 	crewOpen = false;
 	adoptOpen = false;
 	closeCrew();
