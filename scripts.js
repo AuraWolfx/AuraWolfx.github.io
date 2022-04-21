@@ -570,15 +570,15 @@ let cats = {
 };
 let other = {
 	"Patrol":{
-		"breed":"Cow",
+		"breed":"",
 		"sex":"",
-		"type":"",
+		"type":"Cow",
 		"origin":""
 	},
 	"Salmia":{
-		"breed":"Pig",
+		"breed":"",
 		"sex":"",
-		"type":"",
+		"type":"Pig",
 		"origin":""
 	}
 };
@@ -597,7 +597,6 @@ $(document).ready(function(){
 		openNav();
 	}
 	for(let d in Object.keys(dogs).sort().reduce(function (obj, key){obj[key] = dogs[key];return obj;}, {})){
-		console.log(d);
 		$("#dog_list").append($('<div>')
 							.attr('class', 'pet')
 							.attr('id', d)
@@ -652,6 +651,12 @@ $(document).ready(function(){
 			$("#filter").show();
 			document.getElementById('filter').value="All";
 			resetFilter();
+			setFilterOptions(false);
+		}else if(id==2){
+			$("#filter").show();
+			document.getElementById('filter').value="All";
+			resetFilter();
+			setFilterOptions(true);
 		}else{
 			$("#filter").hide();
 		}
@@ -664,13 +669,34 @@ $(document).ready(function(){
 				$(i).css('display', 'none');
 			}
 	}
+
+	function setFilterOptions(isOther){
+		if(isOther){
+			$('#filter_pure').hide();
+			$('#filter_bred').hide();
+			$('#filter_hex').hide();
+			for(let o in other){
+				$("#filter").append($('<option>')
+									.attr('id', "filter_"+other[o].type)
+									.text(other[o].type)
+				);
+			}
+		}else{
+			$("[id^=filter]").hide();
+			$('#filter').show();
+			$('#filter_all').show();
+			$('#filter_pure').show();
+			$('#filter_bred').show();
+			$('#filter_hex').show();
+		}
+	}
+
 	function hideCrew(id){
 		$('#pet_list').css('display', 'none');
 		$('.page_title').text(titles[id]);
 		$("#filter").hide();
 		if(id==7)$('#home_page').show();
 	}
-
 	$(".pet").click(function(){
 		$('#pet_info').show();
 		showImage($(this).attr('id'));
@@ -723,6 +749,8 @@ function filterPets(){
 		setFilter(dogs, selected);
 	}else if(page=="Cats"){
 		setFilter(cats, selected);
+	}else if(page=="Other Pets"){
+		setFilter(other, selected);
 	}
 }
 
@@ -744,6 +772,7 @@ function resetFilter(){
 }
 
 function setFilter(arr, selected){
+	console.log(selected);
 	for(let a in arr){
 		if(selected=="all"){
 			$('#'+a).fadeIn(250, 'linear');
@@ -752,7 +781,7 @@ function setFilter(arr, selected){
 			$('#'+a).css('margin-right', '5px');
 			$('#'+a).css('border', '3px solid var(--c1)');
 		}else{
-			if(arr[a].type!=selected){
+			if(arr[a].type.toLowerCase()!=selected){
 				$('#'+a).fadeOut(250, 'linear');
 				$('#'+a).css('width', '0');
 				$('#'+a).css('margin-left', '0');

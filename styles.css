@@ -212,7 +212,7 @@ a:link, a:visited, a:hover, a:active {
   #expanded{
     width: 100%;
     height: auto;
-    image-rendering: pixelated;
+    image-rendering: crisp-edges;
   }
 }
 
